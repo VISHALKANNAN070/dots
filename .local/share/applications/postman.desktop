@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Postman
+Exec=/opt/postman/Postman/app/postman
+Type=Application
+Categories=Development;
+Terminal=false

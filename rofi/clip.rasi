@@ -1,0 +1,90 @@
+@import "/home/vk/.cache/wal/colors-rofi.rasi"
+
+* {
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px;
+    margin:           0px;
+    padding:          0px;
+    spacing:          0px;
+}
+configuration {
+    font:       "Lilex-Regular 12";
+    show-icons: false;
+}
+window {
+    location:         south;
+    anchor:           south;
+    width:            100%;
+    background-color: @bg;
+    border:           0px;
+    border-radius:    0px;
+}
+mainbox {
+    orientation:      vertical;
+    background-color: transparent;
+    padding:          0px;
+    children:         [listview, inputbar];
+}
+listview {
+    layout:           vertical;
+    lines:            4;
+    fixed-height:     true;
+    scrollbar:        false;
+    background-color: @bg;
+    padding:          4px 0px;
+    spacing:          0px;
+}
+element {
+    orientation:      vertical;
+    background-color: transparent;
+    border-radius:    0px;
+    padding:          0px;
+    cursor:           pointer;
+}
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+element selected.normal {
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px 0px 0px 4px solid;
+    border-color:     @fg;
+}
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    padding:          8px 12px;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    cursor:           inherit;
+}
+inputbar {
+    background-color: @bg;
+    border-top:       1px solid;
+    border-color:     @border;
+    padding:          10px 12px;
+    spacing:          8px;
+    children:         [prompt, entry, case-indicator];
+}
+prompt {
+    background-color: transparent;
+    text-color:       @fg;
+    vertical-align:   0.5;
+    padding:          0px 4px 0px 0px;
+}
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder:      "";
+    placeholder-color: @fg;
+    vertical-align:   0.5;
+    cursor:           text;
+}
+case-indicator {
+    background-color: transparent;
+    text-color:       @fg;
+    vertical-align:   0.5;
+}

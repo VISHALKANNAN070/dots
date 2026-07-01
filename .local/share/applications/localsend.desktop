@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=LocalSend
+Exec=/opt/Localsend/localsend_app
+Type=Application
+Categories=Network;
+Terminal=false

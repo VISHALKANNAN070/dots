@@ -1,0 +1,9 @@
+* {{
+    bg:       {background};
+    fg:       {foreground};
+    bg-alt:   {color0};
+    accent:   {color4};
+    urgent:   {color1};
+    selected: {color2};
+    border:   {color8};
+}}

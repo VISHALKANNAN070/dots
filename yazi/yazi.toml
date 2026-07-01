@@ -1,0 +1,47 @@
+[opener]
+edit = [
+    { run = 'foot nvim "$@"', desc = "Edit with neovim", block = true },
+]
+open = [
+    { run = 'xdg-open "$@"', desc = "Open" },
+]
+image = [
+    { run = 'imv "$@"', desc = "Open with imv", orphan = true },
+]
+video = [
+    { run = 'vlc "$@"', desc = "Open with vlc", orphan = true },
+]
+markdown = [
+    { run = 'foot glow "$@"', desc = "Preview with glow", block = true },
+    { run = 'foot nvim "$@"', desc = "Edit with neovim", block = true },
+]
+pdf = [
+    { run = 'firefox "$@"', desc = "Open with firefox", orphan = true },
+]
+archive = [
+    { run = '7z x "$1"', desc = "Extract with 7z" },
+]
+
+[open]
+rules = [
+    { name = "*/", use = ["edit", "open"] },
+
+    { name = "*.md",                use = ["markdown", "edit"] },
+    { mime = "text/*",              use = ["edit", "open"] },
+
+    { mime = "image/*",             use = ["image", "open"] },
+
+    { mime = "video/*",             use = ["video", "open"] },
+    { mime = "audio/*",             use = ["video", "open"] },
+
+    { name = "*.pdf",               use = ["pdf", "open"] },
+
+    { mime = "application/zip",     use = ["archive", "open"] },
+    { mime = "application/x-tar",   use = ["archive", "open"] },
+    { mime = "application/x-7z-compressed", use = ["archive", "open"] },
+    { mime = "application/gzip",    use = ["archive", "open"] },
+    { mime = "application/x-bzip2", use = ["archive", "open"] },
+    { mime = "application/x-rar",   use = ["archive", "open"] },
+
+    { name = "*",                   use = ["open", "edit"] },
+]

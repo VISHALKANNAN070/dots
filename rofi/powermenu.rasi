@@ -1,0 +1,79 @@
+@import "~/.cache/wal/colors-rofi.rasi"
+
+* {
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px;
+    margin:           0px;
+    padding:          0px;
+    spacing:          0px;
+}
+configuration {
+    show-icons:          false;
+    font:                "Lilex-Regular 12";
+    drun-display-format: "{name}";
+    disable-history:     false;
+}
+window {
+    location:         center;
+    anchor:           center;
+    width:            180px;
+    background-color: @bg;
+    border:           0px;
+    border-radius:    0px;
+    children:         [mainbox];
+}
+mainbox {
+    orientation:      vertical;
+    background-color: transparent;
+    padding:          4px 0px;
+    children:         [listview];
+    spacing:          0px;
+}
+listview {
+    layout:           vertical;
+    lines:            4;
+    fixed-columns:    true;
+    scrollbar:        false;
+    background-color: transparent;
+    padding:          0px;
+    spacing:          0px;
+}
+element {
+    orientation:      vertical;
+    background-color: transparent;
+    border-radius:    0px;
+    padding:          0px;
+    cursor:           pointer;
+    expand:           true;
+}
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg-dim;
+}
+element selected.normal {
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px 0px 0px 4px solid;
+    border-color:     @fg;
+}
+element normal.urgent,
+element alternate.urgent {
+    background-color: transparent;
+    text-color:       @urgent;
+}
+element selected.urgent {
+    background-color: transparent;
+    text-color:       @urgent;
+    border:           0px 0px 0px 2px solid;
+    border-color:     @urgent;
+}
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    padding:          9px 12px;
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
+    cursor:           inherit;
+}

@@ -1,0 +1,101 @@
+@import "/home/vk/.cache/wal/colors-rofi.rasi"
+
+* {
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px;
+    margin:           0px;
+    padding:          0px;
+    spacing:          0px;
+}
+configuration {
+    show-icons:           false;
+    font:                 "Lilex-Regular 12";
+    drun-display-format:  "{name}";
+    disable-history:      false;
+    hover-select:         true;
+}
+window {
+    location:         center;
+    anchor:           center;
+    width:            260px;
+    background-color: @bg;
+    border:           0px;
+    border-radius:    0px;
+    padding:          0px;
+    children:         [mainbox];
+}
+mainbox {
+    orientation:      vertical;
+    background-color: transparent;
+    children:         [inputbar, listview];
+    spacing:          0px;
+}
+inputbar {
+    background-color: @bg;
+    border:           0px 0px 1px 0px solid;
+    border-color:     @border;
+    padding:          10px 12px;
+    spacing:          6px;
+    children:         [prompt, entry, case-indicator];
+}
+prompt {
+    background-color: transparent;
+    text-color:       @fg;
+    vertical-align:   0.5;
+}
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder:      "";
+    vertical-align:   0.5;
+    cursor:           text;
+}
+case-indicator {
+    background-color: transparent;
+    text-color:       @fg;
+    vertical-align:   0.5;
+}
+listview {
+    layout:           vertical;
+    lines:            7;
+    scrollbar:        false;
+    background-color: @bg;
+    padding:          4px 0px;
+    spacing:          0px;
+    fixed-height:     true;
+}
+element {
+    background-color: transparent;
+    border:           0px;
+    padding:          0px;
+    spacing:          0px;
+    children:         [element-text];
+}
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+element selected.normal {
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px 0px 0px 4px solid;
+    border-color:     @fg;
+}
+element urgent.normal {
+    text-color: @fg;
+}
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    padding:          7px 12px;
+    vertical-align:   0.5;
+    cursor:           inherit;
+}
+scrollbar {
+    background-color: transparent;
+    handle-color:     @border;
+    handle-width:     3px;
+    border-radius:    0px;
+}
