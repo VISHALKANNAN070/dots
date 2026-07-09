@@ -1,0 +1,15 @@
+{
+    "logo": {
+        "type": "none"
+    },
+    "modules": [
+  "os",
+  "kernel",
+  "shell",
+  "memory",
+  "disk",
+  "break",
+  "colors",
+  "break"
+]
+}
